@@ -15,36 +15,42 @@ body {
     background-color: var(--body-bg-color);
     color: var(--text-color);
     font-family: 'Merriweather Sans', sans-serif;
+}
+
+.col-1 h2 {
+    margin-bottom: 20px;
+}
+
+.col-1 {
+    width: 80%;
+    max-width: 350px;
+
     display: grid;
     gap: 30px;
 }
 
-.tam {
-    width: 350px;
+.col-2>div, .col-1> div {
+    background-color: var(--bg-cards);
     border-radius: 20px;
 }
 
-body > div {
-    background-color: var(--bg-cards);
-}
-
-.perfil {    
+.col-1 .perfil {    
     padding: 32px 76px 49px 76px;
     text-align: center;
 }
 
-.perfil h1 {
+.col-1 .perfil h1 {
     margin-top: 30px;
     margin-bottom: 10px;
 
     font-size: 23px;
 }
 
-.perfil h2 {
+.col-1 .perfil h2 {
     font-size: 13px;
 }
 
-.social-media {
+.col-1 .social-media {
     display: flex;
     flex-direction: column;
     gap: 28px;
@@ -52,7 +58,7 @@ body > div {
     padding: 30px 40px;
 }
 
-.social-media a {
+.col-1 .social-media a {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -61,8 +67,70 @@ body > div {
     color: var(--text-color);
 }
 
-.tech a {
+.col-1 .tech a {
     display: inline-block;
     flex-wrap: wrap;
     gap: 20px;
+}
+
+.experience, .education {
+    padding: 30px 20px;
+}
+
+.col-1 li {
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+.col-2 {
+    max-width: 952px;
+    width: 80%;
+
+    margin-top: 30px;
+
+    display: grid;
+    gap: 30px;
+}
+
+.col-2 .project-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.col-2 .project-title h2,.col-2 .project-title p {
+    padding: 30px;
+}
+
+
+.col-2 .cards {
+    padding: 30px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+}
+
+.col-2 .card {
+    width: 400px;
+}
+
+.col-2 .cards p {
+    padding-block: 22px;
+}
+
+.col-2 .cards-title, .col-2 .branch{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+
+.col-2 .branch {
+    justify-content: space-between;
+}
+
+.col-2 .cards .follow {
+    display: flex;
 }
