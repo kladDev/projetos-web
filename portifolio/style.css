@@ -12,9 +12,15 @@
 }
 
 body {
+    padding: 30px;
     background-color: var(--body-bg-color);
     color: var(--text-color);
     font-family: 'Merriweather Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    gap: 30px;
 }
 
 .col-1 h2 {
@@ -29,7 +35,7 @@ body {
     gap: 30px;
 }
 
-.col-2>div, .col-1> div {
+.project-title, .col-1> div, .post, .issues{
     background-color: var(--bg-cards);
     border-radius: 20px;
 }
@@ -83,10 +89,8 @@ body {
 }
 
 .col-2 {
-    max-width: 952px;
-    width: 80%;
-
-    margin-top: 30px;
+    max-height: 952px;
+    height: 80%;
 
     display: grid;
     gap: 30px;
@@ -95,7 +99,6 @@ body {
 .col-2 .project-title {
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 .col-2 .project-title h2,.col-2 .project-title p {
@@ -104,16 +107,18 @@ body {
 
 
 .col-2 .cards {
-    padding: 30px;
-
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 30px;
+    justify-content: center;
+    gap: 16px;
 }
 
 .col-2 .card {
-    width: 400px;
+    background-color: var(--bg-cards);
+    padding: 30px;
+    border-radius: 20px;
+    width: 445px;
 }
 
 .col-2 .cards p {
@@ -133,4 +138,29 @@ body {
 
 .col-2 .cards .follow {
     display: flex;
+}
+
+.col-2 .post {
+    padding: 30px;
+}
+
+.col-2 .issues {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    padding: 40px 30px;
+}
+
+.issues .context h2 {
+    font-size: 18;
+}
+
+.issues .context h3 {
+    font-size: 16px;
+    padding-top: 20px;
+}
+
+.issues .context span {
+    margin-right: 20px;
 }
