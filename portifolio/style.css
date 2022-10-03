@@ -28,19 +28,21 @@ body {
 }
 
 .col-1 {
-    width: 80%;
-    max-width: 350px;
+    width: 350px;
 
     display: grid;
     gap: 30px;
 }
 
-.project-title, .col-1> div, .post, .issues{
+.project-title,
+.col-1>div,
+.post,
+.issues {
     background-color: var(--bg-cards);
     border-radius: 20px;
 }
 
-.col-1 .perfil {    
+.col-1 .perfil {
     padding: 32px 76px 49px 76px;
     text-align: center;
 }
@@ -79,7 +81,8 @@ body {
     gap: 20px;
 }
 
-.experience, .education {
+.experience,
+.education {
     padding: 30px 20px;
 }
 
@@ -89,7 +92,6 @@ body {
 }
 
 .col-2 {
-    max-height: 952px;
     height: 80%;
 
     display: grid;
@@ -101,7 +103,8 @@ body {
     justify-content: space-between;
 }
 
-.col-2 .project-title h2,.col-2 .project-title p {
+.col-2 .project-title h2,
+.col-2 .project-title p {
     padding: 30px;
 }
 
@@ -125,7 +128,8 @@ body {
     padding-block: 22px;
 }
 
-.col-2 .cards-title, .col-2 .branch{
+.col-2 .cards-title,
+.col-2 .branch {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -153,7 +157,7 @@ body {
 }
 
 .issues .context h2 {
-    font-size: 18;
+    font-size: 18px;
 }
 
 .issues .context h3 {
@@ -163,4 +167,45 @@ body {
 
 .issues .context span {
     margin-right: 20px;
+}
+
+@media (max-width: 900px) {
+    body {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .col-1,
+    .col-2 {
+        width: 100%;
+    }
+
+    .col-1 {
+        width: auto;
+    }
+
+    .col-2 .issues {
+        flex-direction: column;
+    }
+
+    .col-2 .issues img {
+        width: 120px;
+        margin: auto;
+    }
+
+    .col-2 .issues .context h3 {
+        padding-block: 16px;
+    }
+
+    .col-2 .card {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 450px) {
+    body {
+        padding: 1%;
+    }
+
 }
