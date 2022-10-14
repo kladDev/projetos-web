@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --purple-bg: #290742;
+    --dark-bg: #170027;
+    --button-bg: #9e6dc2;
+    --white: #fff;
+    --light-purple: #fbf6ff;
+    --green: #4fff4b;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+main {
+    background-color: var(--purple-bg);
+
+    font-family: 'Roboto', 'sans-serif';
+    font-weight: 400;
+    font-size: 18px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 64px 136px;
+}
+
+main nav ul {
+    display: flex;
+    gap: 32px;
+}
+
+main a {
+    color: var(--white);
+}
+
+main .active {
+    font-weight: 700;
+}
+
+main .active::before {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 17px;
+
+    background-color: var(--green);
+}
+
+main div {
+    display: flex;
+}
+
+main div input {
+    width: 230px;
+    height: 44px;
+
+    background-color: var(--dark-bg);
+
+    outline: none;
+    border: none;
+}
+
+main div input::placeholder {
+    font-size: 14px;
+    color: var(--light-purple);
+
+    padding: 14px 0 14px 26px;
+}
+
+main div img {
+    padding: 10px 23px;
+
+    background-color: var(--button-bg);
+}
+
+section {
+    background-color: var(--purple-bg);
+
+    display: flex;
+    align-items: center;
+
+    padding-inline: 136px;
+
+    padding-bottom: 64px;
+}
+
+section div h2 {
+    font-family: 'Poppins', 'sans-serif';
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 54px;
+
+    color: var(--button-bg);
+}
+
+section div p {
+    color: var(--light-purple);
+    font-family: 'Roboto';
+    text-align: justify;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+
+    padding: 16px 30px 24px 0;
+}
+
+section div div a {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+
+    color: var(--button-bg);
+}
+
+section div div {
+    display: flex;
+    gap: 8px;
+}
+
+section::before {
+    content: "";
+
+    height: 6px;
+    width: 100%;
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+    background-color: var(--green);
+}
