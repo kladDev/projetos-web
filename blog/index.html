@@ -16,8 +16,9 @@
 
 <body>
     <main>
-        <img src="images/logo.svg" alt="Icon da logo">
-        <nav>
+        <img src="./assets/logo.svg" class="logo" alt="Icon da logo">
+        <nav class="open">
+            <img src="assets/close.svg" alt="Icon de fechar menu" class="close" >
             <ul>
                 <li>
                     <a class="active" href="#">Home</a>
@@ -33,10 +34,11 @@
                 </li>
             </ul>
         </nav>
-        <div>
+        <div class="search">
             <input type="text" placeholder="Buscar">
-            <img src="./images/search.svg" alt="Icon de search">
+            <img src="./assets/search.svg" alt="Icon de search">
         </div>
+        <img class="menu" onclick="openMenu()" src="assets/menu.svg" alt="Icon de menu">
     </main>
 
     <section>
@@ -45,11 +47,15 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla consequatur libero maxime quo officia quae itaque repudiandae velit accusamus cum ex repellendus, illo quas incidunt aliquam. </p>
             <div>
                 <a href="#">Veja mais</a>
-                <img src="./images/arrow-right.svg" alt="Icon de um array para a direita">
+                <img src="./assets/arrow-right.svg" alt="Icon de um array para a direita">
             </div>
         </div>
-        <img src="./images/featured-image.png" alt="">
+        <img class="tamanho" src="./assets/featured-image.png" alt="Imagem de codigo em determinada linguagem de programação">
     </section>
+    <div class="row"></div>
+
+    <script src="script.js"></script>
+
 </body>
 
 </html>
