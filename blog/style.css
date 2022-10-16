@@ -54,15 +54,6 @@ main .active {
     font-weight: 700;
 }
 
-main .active::before {
-    content: "";
-    display: inline-block;
-    width: 2px;
-    height: 17px;
-
-    background-color: var(--green);
-}
-
 main div {
     display: flex;
 }
@@ -90,49 +81,7 @@ main div img {
     background-color: var(--button-bg);
 }
 
-main .open {
-    background-color: #000;
-    width: 100vw;
-    height: 100%;
 
-    position: absolute;
-    left: 0;
-    top: 0;
-
-    z-index: 1;
-}
-
-main .open ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    margin-top: 156px;
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 42px;
-
-    color: var(--white);
-}
-
-
-
-main .open img {
-    position: absolute;
-    right: 24px;   
-    top: 36px;
-}
-
-
-main .open .active::after {
-    content: "";
-    display: block;
-    width: 75px;
-    height: 2px;
-
-    background-color: var(--green);
-}
 
 section {
     background-color: var(--purple-bg);
@@ -185,16 +134,17 @@ section div div {
     background-color: var(--green);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 999px) {
 
+    body {
+        margin: auto;
+        overflow-x: hidden;
+    }
+
+    .close,
     .menu {
-        display: inline-block;
+        display: block;
     }
-
-    main nav {
-        display: none;
-    }
-
 
     section {
         flex-wrap: wrap;
@@ -202,38 +152,71 @@ section div div {
 
     main {
         display: grid;
+        gap: 28px;
         grid-template-areas:
-            "col1 col1-2"
-            "col2 col2";
-        grid-template-columns: 1fr 1fr;
+            "logo menu"
+            "search search";
         grid-template-rows: 1fr 1fr;
     }
 
     main .logo {
-        grid-area: col1;
-
-    }
-
-    main .search {
-        grid-area: col2;
-        justify-items: center;
-
-        margin-top: 24px;
-    }
-
-    main .search input {
-        width: 300px;
+        grid-area: logo;
     }
 
     main .menu {
-        grid-area: col1-2;
+        grid-area: menu;
+    }
 
+    main .search {
+        grid-area: search;
+    }
+
+    main .search input {
+        width: 100%;
+    }
+
+    main nav {
+        background-color: #000;
+        width: 100vw;
+        height: 100%;
+
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        transform: translateX(100%);
+
+        z-index: 1;
+    }
+
+    main nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        margin-top: 156px;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 42px;
+
+        color: var(--white);
+    }
+
+    main nav img {
+        position: absolute;
+        right: 24px;
+        top: 36px;
+    }
+
+    main .active {
+        transform: translateX(0);
     }
 
     section div h2 {
         font-size: 24px;
         text-align: center;
-    
+
     }
 
     section div div {
@@ -242,7 +225,7 @@ section div div {
 
     .tamanho {
         margin: auto;
-        width: 300px;
+        width: 320px;
     }
 
 }
