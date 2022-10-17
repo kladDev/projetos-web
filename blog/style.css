@@ -27,7 +27,7 @@ a {
     display: none;
 }
 
-main {
+header {
     background-color: var(--purple-bg);
 
     font-family: 'Roboto', 'sans-serif';
@@ -41,24 +41,24 @@ main {
     padding: 64px 136px;
 }
 
-main nav ul {
+header nav ul {
     display: flex;
     gap: 32px;
 }
 
-main a {
+header a {
     color: var(--white);
 }
 
-main .active {
+header .active {
     font-weight: 700;
 }
 
-main div {
+header div {
     display: flex;
 }
 
-main div input {
+header div input {
     width: 230px;
     height: 44px;
 
@@ -68,25 +68,24 @@ main div input {
     border: none;
 }
 
-main div input::placeholder {
+header div input::placeholder {
     font-size: 14px;
     color: var(--light-purple);
 
     padding: 14px 0 14px 26px;
 }
 
-main div img {
+header div img {
     padding: 10px 23px;
 
     background-color: var(--button-bg);
 }
 
-
-
-section {
+main {
     background-color: var(--purple-bg);
 
     display: flex;
+    justify-content: space-around;
     align-items: center;
 
     padding-inline: 136px;
@@ -94,7 +93,7 @@ section {
     padding-bottom: 64px;
 }
 
-section div h2 {
+main div h2 {
     font-family: 'Poppins', 'sans-serif';
     font-size: 36px;
     font-weight: 700;
@@ -103,7 +102,7 @@ section div h2 {
     color: var(--button-bg);
 }
 
-section div p {
+main div p {
     color: var(--light-purple);
     font-family: 'Roboto';
     text-align: justify;
@@ -115,7 +114,7 @@ section div p {
     padding: 16px 30px 24px 0;
 }
 
-section div div a {
+main div div a {
     font-family: 'Roboto';
     font-weight: 700;
     font-size: 18px;
@@ -124,7 +123,7 @@ section div div a {
     color: var(--button-bg);
 }
 
-section div div {
+main div div {
     display: flex;
     gap: 8px;
 }
@@ -134,10 +133,79 @@ section div div {
     background-color: var(--green);
 }
 
+.primeira-section, .segunda-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    padding-inline: 136px;
+    padding-top: 64px;
+
+    font-family: 'Roboto';
+    color: var(--purple-bg);
+}
+
+.primeira-section h2, .segunda-section h2 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.primeira-section p, .segunda-section p {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.primeira-section figure img {
+    width: 500px;
+    padding-bottom: 16px;
+}
+
+.primeira-section .post {
+    width: 500px;
+}
+
+.primeira-section .post h2 {
+    padding-block: 16px;
+}
+
+.primeira-section .side div:nth-child(1)::after {
+    content: "";
+    width: 400px;
+    height: 1px;
+
+    display: inline-block;
+    background-color: var(--light-purple);
+}
+
+.primeira-section .side div:nth-child(2) {
+    padding-top: 24px;
+}
+
+.primeira-section .side h2, .segunda-section h2{
+    padding-block: 8px;
+}
+
+.primeira-section .side {
+    width: 400px;
+}
+
+.segunda-section {
+    padding-bottom: 64px;
+    gap: 30px;
+}
+
+.segunda-section div {
+    width: 320px;
+}
+
+.segunda-section img {
+    width: 100%;
+}
+
 @media (max-width: 999px) {
 
     body {
-        margin: auto;
         overflow-x: hidden;
     }
 
@@ -146,11 +214,7 @@ section div div {
         display: block;
     }
 
-    section {
-        flex-wrap: wrap;
-    }
-
-    main {
+    header {
         display: grid;
         gap: 28px;
         grid-template-areas:
@@ -159,23 +223,23 @@ section div div {
         grid-template-rows: 1fr 1fr;
     }
 
-    main .logo {
+    header .logo {
         grid-area: logo;
     }
 
-    main .menu {
+    header .menu {
         grid-area: menu;
     }
 
-    main .search {
+    header .search {
         grid-area: search;
     }
 
-    main .search input {
+    header .search input {
         width: 100%;
     }
 
-    main nav {
+    header nav {
         background-color: #000;
         width: 100vw;
         height: 100%;
@@ -189,7 +253,7 @@ section div div {
         z-index: 1;
     }
 
-    main nav ul {
+    header nav ul {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -203,29 +267,39 @@ section div div {
         color: var(--white);
     }
 
-    main nav img {
+    header nav img {
         position: absolute;
         right: 24px;
         top: 36px;
     }
 
-    main .active {
+    header .active {
         transform: translateX(0);
     }
 
-    section div h2 {
+    main {
+        flex-wrap: wrap;
+    }
+
+    main div h2 {
         font-size: 24px;
         text-align: center;
 
     }
 
-    section div div {
+    main div div {
         padding-bottom: 29px;
     }
 
-    .tamanho {
-        margin: auto;
-        width: 320px;
+    .primeira-section, .segunda-section{
+        justify-content: center;
     }
 
+    section h2{
+        text-align: center;
+    }
+
+    .post, .side {
+        width: 100%;
+    }
 }
