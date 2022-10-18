@@ -11,6 +11,8 @@
     --white: #fff;
     --light-purple: #fbf6ff;
     --green: #4fff4b;
+
+    font-size: 62.5%;
 }
 
 ul {
@@ -32,18 +34,18 @@ header {
 
     font-family: 'Roboto', 'sans-serif';
     font-weight: 400;
-    font-size: 18px;
+    font-size: 1.8rem;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding: 64px 136px;
+    padding: 6.4rem 13.6rem;
 }
 
 header nav ul {
     display: flex;
-    gap: 32px;
+    gap: 3.2rem;
 }
 
 header a {
@@ -59,8 +61,8 @@ header div {
 }
 
 header div input {
-    width: 230px;
-    height: 44px;
+    width: 23rem;
+    height: 4.4rem;
 
     background-color: var(--dark-bg);
 
@@ -69,14 +71,14 @@ header div input {
 }
 
 header div input::placeholder {
-    font-size: 14px;
+    font-size: 1.4rem;
     color: var(--light-purple);
 
-    padding: 14px 0 14px 26px;
+    padding: 1.4rem 0 1.4rem 2.6rem;
 }
 
 header div img {
-    padding: 10px 23px;
+    padding: 1rem 2.3rem;
 
     background-color: var(--button-bg);
 }
@@ -88,16 +90,16 @@ main {
     justify-content: space-around;
     align-items: center;
 
-    padding-inline: 136px;
+    padding-inline: 13.6rem;
 
-    padding-bottom: 64px;
+    padding-bottom: 6.4rem;
 }
 
 main div h2 {
     font-family: 'Poppins', 'sans-serif';
-    font-size: 36px;
+    font-size: 3.6rem;
     font-weight: 700;
-    line-height: 54px;
+    line-height: 5.4rem;
 
     color: var(--button-bg);
 }
@@ -108,28 +110,28 @@ main div p {
     text-align: justify;
 
     font-weight: 400;
-    font-size: 18px;
-    line-height: 27px;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
 
-    padding: 16px 30px 24px 0;
+    padding: 1.6rem 3rem 2.4rem 0;
 }
 
 main div div a {
     font-family: 'Roboto';
     font-weight: 700;
-    font-size: 18px;
-    line-height: 27px;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
 
     color: var(--button-bg);
 }
 
 main div div {
     display: flex;
-    gap: 8px;
+    gap: .8rem;
 }
 
 .row {
-    height: 6px;
+    height: .6rem;
     background-color: var(--green);
 }
 
@@ -138,8 +140,8 @@ main div div {
     justify-content: space-between;
     flex-wrap: wrap;
 
-    padding-inline: 136px;
-    padding-top: 64px;
+    padding-inline: 13.6rem;
+    padding-top: 6.4rem;
 
     font-family: 'Roboto';
     color: var(--purple-bg);
@@ -147,63 +149,63 @@ main div div {
 
 .primeira-section h2, .segunda-section h2 {
     font-weight: 700;
-    font-size: 24px;
-    line-height: 36px;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
 }
 
 .primeira-section p, .segunda-section p {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
 }
 
 .primeira-section figure img {
-    width: 500px;
-    padding-bottom: 16px;
+    width: 50rem;
+    padding-bottom: 1.6rem;
 }
 
 .primeira-section .post {
-    width: 500px;
+    width: 50rem;
 }
 
 .primeira-section .post h2 {
-    padding-block: 16px;
+    padding-block: 1.6rem;
 }
 
 .primeira-section .side div:nth-child(1)::after {
     content: "";
-    width: 400px;
-    height: 1px;
+    width: 40rem;
+    height: .1rem;
 
     display: inline-block;
     background-color: var(--light-purple);
 }
 
 .primeira-section .side div:nth-child(2) {
-    padding-top: 24px;
+    padding-top: 2.4rem;
 }
 
 .primeira-section .side h2, .segunda-section h2{
-    padding-block: 8px;
+    padding-block: .8rem;
 }
 
 .primeira-section .side {
-    width: 400px;
+    width: 40rem;
 }
 
 .segunda-section {
-    padding-bottom: 64px;
-    gap: 30px;
+    padding-bottom: 6.4rem;
+    gap: 3rem;
 }
 
 .segunda-section div {
-    width: 320px;
+    width: 32rem;
 }
 
 .segunda-section img {
     width: 100%;
 }
 
-@media (max-width: 999px) {
+@media (max-width: 1024px) {
 
     body {
         overflow-x: hidden;
@@ -216,7 +218,7 @@ main div div {
 
     header {
         display: grid;
-        gap: 28px;
+        gap: 2.8rem;
         grid-template-areas:
             "logo menu"
             "search search";
@@ -248,6 +250,8 @@ main div div {
         left: 0;
         top: 0;
 
+
+        transition: transform 200ms;
         transform: translateX(100%);
 
         z-index: 1;
@@ -259,18 +263,18 @@ main div div {
         justify-content: center;
         align-items: center;
 
-        margin-top: 156px;
+        margin-top: 15.6rem;
         font-weight: 400;
-        font-size: 28px;
-        line-height: 42px;
+        font-size: 2.8rem;
+        line-height: 4.2rem;
 
         color: var(--white);
     }
 
     header nav img {
         position: absolute;
-        right: 24px;
-        top: 36px;
+        right: 2.4rem;
+        top: 3.6rem;
     }
 
     header .active {
@@ -282,13 +286,13 @@ main div div {
     }
 
     main div h2 {
-        font-size: 24px;
+        font-size: 2.4rem;
         text-align: center;
 
     }
 
     main div div {
-        padding-bottom: 29px;
+        padding-bottom: 2.9rem;
     }
 
     .primeira-section, .segunda-section{
@@ -301,5 +305,9 @@ main div div {
 
     .post, .side {
         width: 100%;
+    }
+
+    .post p {
+        padding-bottom: 6.4rem;
     }
 }
