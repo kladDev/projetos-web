@@ -11,8 +11,6 @@
     --white: #fff;
     --light-purple: #fbf6ff;
     --green: #4fff4b;
-
-    font-size: 62.5%;
 }
 
 ul {
@@ -32,53 +30,67 @@ a {
 header {
     background-color: var(--purple-bg);
 
-    font-family: 'Roboto', 'sans-serif';
-    font-weight: 400;
-    font-size: 1.8rem;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding: 6.4rem 13.6rem;
+    font-family: 'Roboto', 'sans-serif';
+    font-size: 18px;
+
+    padding: 64px 136px;
 }
 
 header nav ul {
     display: flex;
-    gap: 3.2rem;
+    gap: 32px;
 }
 
 header a {
     color: var(--white);
 }
 
+header a:after {
+    content: "";
+    display: block;
+
+    width: 0;
+    height: 2px;
+    margin-top: 2px;
+
+    background-color: var(--green);
+    transition: width .3s;
+}
+
+header a:hover::after {
+    width: 100%;
+}
+
 header .active {
     font-weight: 700;
 }
 
-header div {
+header .search {
     display: flex;
 }
 
-header div input {
-    width: 23rem;
-    height: 4.4rem;
+header .search input {
+    width: 230px;
+    height: 44px;
 
     background-color: var(--dark-bg);
 
-    outline: none;
     border: none;
 }
 
-header div input::placeholder {
-    font-size: 1.4rem;
+header .search input::placeholder {
+    font-size: 14px;
     color: var(--light-purple);
 
-    padding: 1.4rem 0 1.4rem 2.6rem;
+    padding: 14px 0 14px 26px;
 }
 
-header div img {
-    padding: 1rem 2.3rem;
+header .search img {
+    padding: 10px 23px;
 
     background-color: var(--button-bg);
 }
@@ -90,16 +102,13 @@ main {
     justify-content: space-around;
     align-items: center;
 
-    padding-inline: 13.6rem;
-
-    padding-bottom: 6.4rem;
+    padding-inline: 136px;
+    padding-bottom: 64px;
 }
 
 main div h2 {
     font-family: 'Poppins', 'sans-serif';
-    font-size: 3.6rem;
-    font-weight: 700;
-    line-height: 5.4rem;
+    font-size: 36px;
 
     color: var(--button-bg);
 }
@@ -109,96 +118,95 @@ main div p {
     font-family: 'Roboto';
     text-align: justify;
 
-    font-weight: 400;
-    font-size: 1.8rem;
-    line-height: 2.7rem;
+    font-size: 18px;
 
-    padding: 1.6rem 3rem 2.4rem 0;
+    padding: 16px 3px 24px 0;
 }
 
 main div div a {
     font-family: 'Roboto';
     font-weight: 700;
-    font-size: 1.8rem;
-    line-height: 2.7rem;
+    font-size: 18px;
+    line-height: 27px;
 
     color: var(--button-bg);
 }
 
 main div div {
     display: flex;
-    gap: .8rem;
+    gap: 8px;
 }
 
 .row {
-    height: .6rem;
+    height: 6px;
     background-color: var(--green);
 }
 
-.primeira-section, .segunda-section {
+.primeira-section,
+.segunda-section {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 
-    padding-inline: 13.6rem;
-    padding-top: 6.4rem;
+    margin-inline: 136px;
+    margin-top: 64px;
 
     font-family: 'Roboto';
     color: var(--purple-bg);
 }
 
-.primeira-section h2, .segunda-section h2 {
-    font-weight: 700;
-    font-size: 2.4rem;
-    line-height: 3.6rem;
+.primeira-section h2,
+.segunda-section h2 {
+    font-size: 24px;
 }
 
-.primeira-section p, .segunda-section p {
-    font-size: 1.6rem;
-    line-height: 2.4rem;
+.primeira-section p,
+.segunda-section p {
+    font-size: 16px;
+}
+
+.primeira-section figure img,
+.primeira-section .post {
+    width: 500px;
 }
 
 .primeira-section figure img {
-    width: 50rem;
-    padding-bottom: 1.6rem;
-}
-
-.primeira-section .post {
-    width: 50rem;
+    margin-bottom: 16px;
 }
 
 .primeira-section .post h2 {
-    padding-block: 1.6rem;
+    margin-block: 16px;
 }
 
 .primeira-section .side div:nth-child(1)::after {
     content: "";
-    width: 40rem;
-    height: .1rem;
+    width: 400px;
+    height: 1px;
 
     display: inline-block;
     background-color: var(--light-purple);
 }
 
 .primeira-section .side div:nth-child(2) {
-    padding-top: 2.4rem;
+    padding-top: 24px;
 }
 
-.primeira-section .side h2, .segunda-section h2{
-    padding-block: .8rem;
+.primeira-section .side h2,
+.segunda-section h2 {
+    margin-block: 8px;
 }
 
 .primeira-section .side {
-    width: 40rem;
+    width: 400px;
 }
 
 .segunda-section {
-    padding-bottom: 6.4rem;
-    gap: 3rem;
+    margin-bottom: 64px;
+    gap: 30px;
 }
 
 .segunda-section div {
-    width: 32rem;
+    width: 320px;
 }
 
 .segunda-section img {
@@ -218,7 +226,7 @@ main div div {
 
     header {
         display: grid;
-        gap: 2.8rem;
+        gap: 28px;
         grid-template-areas:
             "logo menu"
             "search search";
@@ -242,7 +250,7 @@ main div div {
     }
 
     header nav {
-        background-color: #000;
+        background-color: var(--dark-bg);
         width: 100vw;
         height: 100%;
 
@@ -250,9 +258,7 @@ main div div {
         left: 0;
         top: 0;
 
-
-        transition: transform 200ms;
-        transform: translateX(100%);
+        transform: translateX(-100%);
 
         z-index: 1;
     }
@@ -262,23 +268,22 @@ main div div {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
-        margin-top: 15.6rem;
-        font-weight: 400;
-        font-size: 2.8rem;
-        line-height: 4.2rem;
+        
+        margin-top: 124px;
+        font-size: 28px;
 
         color: var(--white);
     }
 
-    header nav img {
+    header nav .close {
         position: absolute;
-        right: 2.4rem;
-        top: 3.6rem;
+        right: 15%;
+        top: 64px;
     }
 
     header .active {
         transform: translateX(0);
+        transition: transform .5s;
     }
 
     main {
@@ -286,28 +291,67 @@ main div div {
     }
 
     main div h2 {
-        font-size: 2.4rem;
+        font-size: 24px;
         text-align: center;
 
     }
 
     main div div {
-        padding-bottom: 2.9rem;
+        padding-bottom: 29px;
     }
 
-    .primeira-section, .segunda-section{
+    .primeira-section,
+    .segunda-section {
         justify-content: center;
     }
 
-    section h2{
+    section h2 {
         text-align: center;
     }
 
-    .post, .side {
+    .post,
+    .side {
         width: 100%;
     }
 
     .post p {
-        padding-bottom: 6.4rem;
+        padding-bottom: 64px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    header {
+        padding: 16px;
+    }
+
+    header nav .close {
+        right: 8%;
+        top: 16px;
+    }
+
+    main {
+        padding-inline: 16px;
+    }
+
+    main h2 {
+        font-size: 16px;
+    }
+
+    main p {
+        font-size: 12px;
+    }
+
+    .tamanho,
+    .primeira-section .side,
+    .primeira-section .side div:nth-child(1)::after,
+    .primeira-section .post,
+    .primeira-section figure img {
+        width: 300px;
+    }
+
+    .primeira-section,
+    .segunda-section {
+        margin-inline: 32px;
     }
 }
