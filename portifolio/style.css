@@ -161,6 +161,24 @@ body {
   padding: 40px 30px;
 }
 
+.tech {
+  padding: 16px;
+}
+
+.tech div{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.tech span {
+  padding: 12px 16px;
+  border-radius: 6px;
+  background-color: var(--bg-techs);
+}
+
 .issues .context h2 {
   font-size: 18px;
 }
