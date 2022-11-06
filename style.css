@@ -119,6 +119,7 @@ section figure {
 }
 
 section figure img {
+    object-position: left;
     width: 100%;
     height: 400px;  
 
